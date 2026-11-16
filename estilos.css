@@ -1,0 +1,169 @@
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #11111f;
+    color: white;
+}
+
+/* Encabezado */
+.encabezado {
+    background: linear-gradient(135deg, #30205c, #17172d);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.encabezado h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #c6a5ff;
+}
+
+.encabezado p {
+    color: #dddded;
+    font-size: 16px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+/* Buscador */
+.buscador {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.buscador h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.barra-busqueda {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.barra-busqueda input {
+    width: 60%;
+    max-width: 500px;
+    padding: 14px;
+    border: 1px solid #5b4b83;
+    border-radius: 8px;
+    background: #222238;
+    color: white;
+    font-size: 16px;
+}
+
+.barra-busqueda button {
+    padding: 14px 25px;
+    background: #8855dd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.barra-busqueda button:hover {
+    background: #a477ef;
+}
+
+/* Resultados y favoritos */
+.resultados,
+.favoritos {
+    margin-bottom: 40px;
+}
+
+.resultados h2,
+.favoritos h2 {
+    margin-bottom: 20px;
+    color: #c6a5ff;
+}
+
+.lista-resultados,
+#favoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjetas de series */
+.tarjeta {
+    background: #222238;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.tarjeta h3 {
+    padding: 12px;
+    font-size: 17px;
+}
+
+.tarjeta p {
+    padding: 0 12px;
+    color: #ccccdd;
+}
+
+.tarjeta button {
+    margin: 12px;
+    padding: 9px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #8855dd;
+    color: white;
+    cursor: pointer;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #1b1b2c;
+    color: #ccccdd;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #c6a5ff;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    .barra-busqueda {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barra-busqueda input,
+    .barra-busqueda button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .encabezado h1 {
+        font-size: 30px;
+    }
+}
